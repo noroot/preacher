@@ -1,0 +1,53 @@
+<template name="layout">
+  <div class="container">
+    
+    <div class="navbar navbar-default">
+      <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	</button>
+	<a class="navbar-brand" href="{{ pathFor 'index'}}"><i class="mdi-content-content-paste"></i>Preacher</a>
+      </div>
+      <div class="navbar-collapse collapse navbar-responsive-collapse">
+	<form class="navbar-form navbar-left">
+	   {{> esInput index="posts" class="form-control col-lg-8" placeholder="Search..." }}
+	</form>
+	<ul class="nav navbar-nav navbar-right">
+            {{> loginButtons}} <!-- here -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+      	{{> searchResults }}
+      </div>
+    </div>
+    
+    {{> yield}}
+
+    {{> footer }}
+  </div>
+</template>
+
+<template name="searchResults">
+  {{#esEach index="posts"}}
+  {{> postItem}}
+  {{/esEach}}
+</template>
+
+
+<template name="footer">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+	<div class="panel-body">&copy; 2015 Dmitry
+	R. <i class="mdi-content-content-paste"></i>Preacher for the
+	sake of example 
+	meteor js application.</div>
+      </div>
+    </div>
+  </div>
+</template>

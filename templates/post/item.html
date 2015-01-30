@@ -1,0 +1,10 @@
+<template name="postItem">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <a href="{{ pathFor 'post' id=this._id }}">{{ title }}</a>
+      {{ formatDate created_at }}</div>
+    <div class="panel-body">
+      {{#markdown}}{{ message }}{{/markdown}}
+    </div>
+  </div>
+</template>

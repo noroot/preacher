@@ -1,0 +1,11 @@
+<template name="postOne">
+      
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2>{{ title }} // {{formatDate created_at }}</h2>
+    </div>
+    <div class="panel-body">
+      {{#markdown}}{{ message }}{{/markdown}}
+    </div>
+  </div>
+</template>

@@ -1,0 +1,4 @@
+.DS_Store
+.meteor
+settings.json
+public/bower_components
