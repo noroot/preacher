@@ -1,5 +1,5 @@
 # Preacher
-===
+
 
 simple pastebin example with meteorjs framework
 
