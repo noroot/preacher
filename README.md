@@ -3,6 +3,7 @@
 
 simple pastebin example with meteorjs framework
 
+demo located here [http://noroot.meteor.com](http://noroot.meteor.com)
 
 
 ## Start
